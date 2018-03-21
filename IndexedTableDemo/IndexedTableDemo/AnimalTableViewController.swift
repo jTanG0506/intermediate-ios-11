@@ -47,26 +47,43 @@ class AnimalTableViewController: UITableViewController {
   // MARK: - Table view data source
   override func numberOfSections(in tableView: UITableView) -> Int {
     // Return the number of sections.
-    return 1
+    return animalsSectionTitles.count
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // Return the number of rows in the section.
-    return animals.count
+    let animalKey = animalsSectionTitles[section]
+    
+    guard let animalValues = animalsDict[animalKey] else {
+      return 0
+    }
+    
+    return animalValues.count
+  }
+  
+  override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return animalsSectionTitles[section]
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
     
     // Configure the cell...
-    cell.textLabel?.text = animals[indexPath.row]
-    
-    // Convert the animal name to lower case and
-    // then replace all occurences of a space with an underscore
-    let imageFileName = animals[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "_")
-    cell.imageView?.image = UIImage(named: imageFileName)
+    let animalKey = animalsSectionTitles[indexPath.section]
+    if let animalValues = animalsDict[animalKey] {
+      cell.textLabel?.text = animalValues[indexPath.row]
+      
+      // Convert the animal name to lower case and
+      // then replace all occurences of a space with an underscore
+      let imageFileName = animalValues[indexPath.row].lowercased().replacingOccurrences(of: " ", with: "_")
+      cell.imageView?.image = UIImage(named: imageFileName)
+    }
     
     return cell
+  }
+  
+  override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    return animalsSectionTitles
   }
   
 }
