@@ -13,6 +13,8 @@ class AnimalTableViewController: UITableViewController {
   // MARK: - Properties
   let animals = ["Bear", "Black Swan", "Buffalo", "Camel", "Cockatoo", "Dog", "Donkey", "Emu", "Giraffe", "Greater Rhea", "Hippopotamus", "Horse", "Koala", "Lion", "Llama", "Manatus", "Meerkat", "Panda", "Peacock", "Pig", "Platypus", "Polar Bear", "Rhinoceros", "Seagull", "Tasmania Devil", "Whale", "Whale Shark", "Wombat"]
   
+  let animalIndexTitles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+  
   var animalsDict = [String: [String]]()
   var animalsSectionTitles = [String]()
   
@@ -83,7 +85,16 @@ class AnimalTableViewController: UITableViewController {
   }
   
   override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-    return animalsSectionTitles
+    return animalIndexTitles
+  }
+  
+  override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String,
+                          at index: Int) -> Int {
+    guard let index = animalsSectionTitles.index(of: title) else {
+      return -1
+    }
+    
+    return index
   }
   
 }
