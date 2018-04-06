@@ -56,10 +56,14 @@ class ArticleTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     // Initial state of cell
     cell.alpha = 0.0
+    let rotationAngleInRadians = 90.0 * CGFloat(Double.pi / 180.0)
+    let rotationTransformation = CATransform3DMakeRotation(rotationAngleInRadians, 0, 0, 1)
+    cell.layer.transform = rotationTransformation
     
     // Animate the fade-in
     UIView.animate(withDuration: 1.0) {
       cell.alpha = 1.0
+      cell.layer.transform = CATransform3DIdentity
     }
   }
 }
