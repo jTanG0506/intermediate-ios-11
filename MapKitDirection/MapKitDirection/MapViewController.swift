@@ -14,10 +14,35 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet var mapView: MKMapView!
   
   var restaurant: Restaurant!
+  
   var locationManager = CLLocationManager()
+  var currentPlacemark: CLPlacemark?
   
   @IBAction func showDirection(sender: UIButton) {
+    guard let currentPlacemark = currentPlacemark else {
+      return
+    }
     
+    // Build the direction request
+    let directionRequest = MKDirectionsRequest()
+    directionRequest.source = MKMapItem.forCurrentLocation()
+    directionRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: currentPlacemark))
+    directionRequest.transportType = .automobile
+    
+    // Calculate the directions
+    let directions = MKDirections(request: directionRequest)
+    directions.calculate { (routeResponse, routeError) in
+      guard let routeResponse = routeResponse else {
+        if let routeError = routeError {
+          print("Error: \(routeError)")
+        }
+        
+        return
+      }
+      
+      let route = routeResponse.routes[0]
+      self.mapView.add(route.polyline, level: .aboveRoads)
+    }
   }
   
   override func viewDidLoad() {
@@ -42,6 +67,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
       if let placemarks = placemarks {
         // Get the first placemark
         let placemark = placemarks[0]
+        self.currentPlacemark = placemark
         
         // Add annotation
         let annotation = MKPointAnnotation()
@@ -115,6 +141,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     annotationView?.leftCalloutAccessoryView = leftIconView
     
     return annotationView
+  }
+  
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    let renderer = MKPolylineRenderer(overlay: overlay)
+    renderer.strokeColor = UIColor.blue
+    renderer.lineWidth = 3.0
+    
+    return renderer
   }
   
 }
