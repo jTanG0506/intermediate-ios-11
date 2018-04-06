@@ -66,10 +66,10 @@
 				F44247851DA6439300F3F437 /* Main.storyboard */,
 				F44247881DA6439300F3F437 /* Assets.xcassets */,
 				F442478A1DA6439300F3F437 /* LaunchScreen.storyboard */,
-				F442478D1DA6439300F3F437 /* Info.plist */,
 				F44247931DA6462E00F3F437 /* RestaurantTableViewController.swift */,
 				F44247951DA6465600F3F437 /* MapViewController.swift */,
 				F44247971DA6471000F3F437 /* Restaurant.swift */,
+				F442478D1DA6439300F3F437 /* Info.plist */,
 			);
 			path = MapKitDirection;
 			sourceTree = "<group>";
