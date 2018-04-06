@@ -17,6 +17,7 @@ class ArticleTableViewController: UITableViewController {
                     "Creating Gradient Colors Using CAGradientLayer",
                     "A Beginner's Guide to CALayer"];
   let postImages = ["imessage-sticker-pack", "face-detection-featured", "speech-kit-featured", "vapor-web-framework", "cagradientlayer-demo", "calayer-featured"];
+  var postShown: [Bool] = Array(repeating: false, count: 6)
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,6 +55,15 @@ class ArticleTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    
+    // Only animate if the cell has not been shown before.
+    guard postShown[indexPath.row] == false else {
+      return
+    }
+    
+    // Set to true, so that it won't be animated again.
+    postShown[indexPath.row] = true
+    
     // Initial state of cell
     cell.alpha = 0.0
     
