@@ -43,7 +43,6 @@ class ArticleTableViewController: UITableViewController {
     return postTitles.count
   }
   
-  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ArticleTableViewCell
     
@@ -54,5 +53,13 @@ class ArticleTableViewController: UITableViewController {
     return cell
   }
   
-  
+  override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    // Initial state of cell
+    cell.alpha = 0.0
+    
+    // Animate the fade-in
+    UIView.animate(withDuration: 1.0) {
+      cell.alpha = 1.0
+    }
+  }
 }
