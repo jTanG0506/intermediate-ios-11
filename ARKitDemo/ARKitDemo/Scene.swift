@@ -24,6 +24,19 @@ class Scene: SKScene {
       return
     }
     
+    // Check if the user touches a label node
+    if let touchLocation = touches.first?.location(in: self) {
+      if let node = nodes(at: touchLocation).first as? SKLabelNode {
+        // If so, fade the node out and remove it from the scene.
+        let fadeOut = SKAction.fadeOut(withDuration: 1.0)
+        node.run(fadeOut) {
+          node.removeFromParent()
+        }
+        
+        return
+      }
+    }
+    
     // Create anchor using the camera's current position
     if let currentFrame = sceneView.session.currentFrame {
       
