@@ -13,7 +13,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [ ] Chapter 5 - How to Integrate the Twitter and Facebook SDK for Social Sharing
 - [ ] Chapter 6 - Working with Email and Attachments
 - [ ] Chapter 7 - Sending SMS and MMS Using MessageUI Framework
-- [ ] Chapter 8 - How to Get Direction and Draw Route on Maps
+- [X] Chapter 8 - How to Get Direction and Draw Route on Maps
 - [ ] Chapter 9 - Search Nearby Points of Interest Using Local Search
 - [ ] Chapter 10 - Audio Recording and Playback
 - [ ] Chapter 11 - Scan QR Code Using AVFoundation Framework
