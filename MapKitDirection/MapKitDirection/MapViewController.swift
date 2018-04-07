@@ -19,6 +19,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   var locationManager = CLLocationManager()
   var currentPlacemark: CLPlacemark?
   var currentTransportType = MKDirectionsTransportType.automobile
+  var currentRoute: MKRoute?
   
   @IBAction func showDirection(sender: UIButton) {
     guard let currentPlacemark = currentPlacemark else {
@@ -50,12 +51,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return
       }
       
+      // Draw the route onto the map
       let route = routeResponse.routes[0]
       self.mapView.removeOverlays(self.mapView.overlays)
       self.mapView.add(route.polyline, level: .aboveRoads)
       
+      // Set zoom to perfectly fit the route
       let rect = route.polyline.boundingMapRect
       self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
+      
+      // Store the route to be passed to RouteTableViewController
+      self.currentRoute = route
     }
   }
   
@@ -159,8 +165,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
     leftIconView.image = UIImage(named: restaurant.image)
     annotationView?.leftCalloutAccessoryView = leftIconView
+    annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
     
     return annotationView
+  }
+  
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    performSegue(withIdentifier: "showSteps", sender: view)
   }
   
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -169,6 +180,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     renderer.lineWidth = 3.0
     
     return renderer
+  }
+  
+  // MARK: Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showSteps" {
+      let routeTableViewController = segue.destination.childViewControllers[0] as! RouteTableViewController
+      if let steps = currentRoute?.steps {
+        routeTableViewController.routeSteps = steps
+      }
+    }
   }
   
 }

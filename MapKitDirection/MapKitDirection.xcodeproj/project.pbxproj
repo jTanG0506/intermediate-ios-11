@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D30921D20790DF100D38C20 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D30921C20790DF100D38C20 /* RouteTableViewController.swift */; };
 		F44247821DA6439300F3F437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44247811DA6439300F3F437 /* AppDelegate.swift */; };
 		F44247871DA6439300F3F437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44247851DA6439300F3F437 /* Main.storyboard */; };
 		F44247891DA6439300F3F437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44247881DA6439300F3F437 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D30921C20790DF100D38C20 /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 		F442477E1DA6439300F3F437 /* MapKitDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44247811DA6439300F3F437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44247861DA6439300F3F437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				F442478A1DA6439300F3F437 /* LaunchScreen.storyboard */,
 				F44247931DA6462E00F3F437 /* RestaurantTableViewController.swift */,
 				F44247951DA6465600F3F437 /* MapViewController.swift */,
+				8D30921C20790DF100D38C20 /* RouteTableViewController.swift */,
 				F44247971DA6471000F3F437 /* Restaurant.swift */,
 				F442478D1DA6439300F3F437 /* Info.plist */,
 			);
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D30921D20790DF100D38C20 /* RouteTableViewController.swift in Sources */,
 				F44247941DA6462E00F3F437 /* RestaurantTableViewController.swift in Sources */,
 				F44247981DA6471000F3F437 /* Restaurant.swift in Sources */,
 				F44247961DA6465600F3F437 /* MapViewController.swift in Sources */,
