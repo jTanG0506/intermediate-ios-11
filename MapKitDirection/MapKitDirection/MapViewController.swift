@@ -51,6 +51,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
       }
       
       let route = routeResponse.routes[0]
+      self.mapView.removeOverlays(self.mapView.overlays)
       self.mapView.add(route.polyline, level: .aboveRoads)
       
       let rect = route.polyline.boundingMapRect
@@ -164,7 +165,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     let renderer = MKPolylineRenderer(overlay: overlay)
-    renderer.strokeColor = UIColor.blue
+    renderer.strokeColor = currentTransportType == .automobile ? UIColor.purple : UIColor.orange
     renderer.lineWidth = 3.0
     
     return renderer
