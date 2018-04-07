@@ -182,7 +182,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     return renderer
   }
   
-  // MARK: Navigation
+  // MARK: - Navigation
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showSteps" {
