@@ -46,4 +46,5 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [ ] Chapter 38 - Google and Facebook Authentication Using Firebase
 - [ ] Chapter 39 - Using Firebase Database and Storage to Build an Instagram-like App
 - [ ] Chapter 40 - Working with CoreML
-- [ ] Chapter 41 - Working with ARKit
+- [ ] Chapter 41 - Building AR Apps with ARKit and SpriteKit
+- [ ] Chapter 42 - Working with 3D Objects in the Augmented Reality using ARKIt and SceneKit
