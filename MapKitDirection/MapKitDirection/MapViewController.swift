@@ -12,22 +12,32 @@ import MapKit
 class MapViewController: UIViewController, MKMapViewDelegate {
   
   @IBOutlet var mapView: MKMapView!
+  @IBOutlet var segmentedControl: UISegmentedControl!
   
   var restaurant: Restaurant!
   
   var locationManager = CLLocationManager()
   var currentPlacemark: CLPlacemark?
+  var currentTransportType = MKDirectionsTransportType.automobile
   
   @IBAction func showDirection(sender: UIButton) {
     guard let currentPlacemark = currentPlacemark else {
       return
     }
     
+    switch segmentedControl.selectedSegmentIndex {
+    case 0: currentTransportType = .automobile
+    case 1: currentTransportType = .walking
+    default: break
+    }
+    
+    segmentedControl.isHidden = false
+    
     // Build the direction request
     let directionRequest = MKDirectionsRequest()
     directionRequest.source = MKMapItem.forCurrentLocation()
     directionRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: currentPlacemark))
-    directionRequest.transportType = .automobile
+    directionRequest.transportType = currentTransportType
     
     // Calculate the directions
     let directions = MKDirections(request: directionRequest)
@@ -50,6 +60,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // Hide the segmented control, until user clicks on Direction button
+    segmentedControl.isHidden = true
+    
+    // Register showDirection as segmentedControl's valueChanged target
+    segmentedControl.addTarget(self, action: #selector(showDirection), for: .valueChanged)
     
     // Request for a user's authorisation for location services
     locationManager.requestWhenInUseAuthorization()
