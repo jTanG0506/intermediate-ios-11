@@ -30,4 +30,28 @@ class FancyButton: UIButton {
     }
   }
   
+  @IBInspectable var titleLeftPadding: CGFloat = 0.0 {
+    didSet {
+      titleEdgeInsets.left = titleLeftPadding
+    }
+  }
+  
+  @IBInspectable var titleRightPadding: CGFloat = 0.0 {
+    didSet {
+      titleEdgeInsets.right = titleRightPadding
+    }
+  }
+  
+  @IBInspectable var titleTopPadding: CGFloat = 0.0 {
+    didSet {
+      titleEdgeInsets.top = titleTopPadding
+    }
+  }
+  
+  @IBInspectable var titleBottomPadding: CGFloat = 0.0 {
+    didSet {
+      titleEdgeInsets.bottom = titleBottomPadding
+    }
+  }
+  
 }
