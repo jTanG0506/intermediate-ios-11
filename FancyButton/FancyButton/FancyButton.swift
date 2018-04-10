@@ -30,6 +30,8 @@ class FancyButton: UIButton {
     }
   }
   
+  // MARK: - Title Padding
+  
   @IBInspectable var titleLeftPadding: CGFloat = 0.0 {
     didSet {
       titleEdgeInsets.left = titleLeftPadding
@@ -51,6 +53,43 @@ class FancyButton: UIButton {
   @IBInspectable var titleBottomPadding: CGFloat = 0.0 {
     didSet {
       titleEdgeInsets.bottom = titleBottomPadding
+    }
+  }
+  
+  // MARK: - Image Padding
+  
+  @IBInspectable var imageLeftPadding: CGFloat = 0.0 {
+    didSet {
+      imageEdgeInsets.left = imageLeftPadding
+    }
+  }
+  
+  @IBInspectable var imageRightPadding: CGFloat = 0.0 {
+    didSet {
+      imageEdgeInsets.right = imageRightPadding
+    }
+  }
+  
+  @IBInspectable var imageTopPadding: CGFloat = 0.0 {
+    didSet {
+      imageEdgeInsets.top = imageTopPadding
+    }
+  }
+  
+  @IBInspectable var imageBottomPadding: CGFloat = 0.0 {
+    didSet {
+      imageEdgeInsets.bottom = imageBottomPadding
+    }
+  }
+  
+  // MARK: - Image Aligment
+  @IBInspectable var enableImageRightAligned: Bool = false
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    if enableImageRightAligned, let imageView = imageView {
+      imageEdgeInsets.left = self.bounds.width - imageView.bounds.width - imageRightPadding
     }
   }
   
