@@ -41,7 +41,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [ ] Chapter 33 - Using CocoaPods in Swift Projects
 - [ ] Chapter 34 - Building a Simple Sticker App
 - [ ] Chapter 35 - Building iMessage Apps Using Messages Framework
-- [ ] Chapter 36 - Building Custom UI Components Using IBDesignable and IBInspectable
+- [X] Chapter 36 - Building Custom UI Components Using IBDesignable and IBInspectable
 - [ ] Chapter 37 - Using Firebase for User Authentication
 - [ ] Chapter 38 - Google and Facebook Authentication Using Firebase
 - [ ] Chapter 39 - Using Firebase Database and Storage to Build an Instagram-like App
