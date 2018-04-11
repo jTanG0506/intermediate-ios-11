@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r5y-4k-eq6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AzU-lp-Hlh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Icon Store-->
         <scene sceneID="6Co-tb-qDr">
             <objects>
-                <collectionViewController id="r5y-4k-eq6" sceneMemberID="viewController">
+                <collectionViewController id="r5y-4k-eq6" customClass="IconCollectionViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0x6-wm-DgS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DLa-ST-OMw">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="DLa-ST-OMw" customClass="IconCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -54,6 +54,10 @@
                                     <constraint firstAttribute="trailing" secondItem="Bng-tP-w7d" secondAttribute="trailing" id="njn-Vn-bJ5"/>
                                     <constraint firstItem="TIk-so-zrW" firstAttribute="leading" secondItem="DLa-ST-OMw" secondAttribute="leading" id="tYL-vY-vgO"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="iconImageView" destination="Bng-tP-w7d" id="y5m-xP-q0K"/>
+                                    <outlet property="iconPriceLabel" destination="TIk-so-zrW" id="whn-YP-koP"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -61,8 +65,27 @@
                             <outlet property="delegate" destination="r5y-4k-eq6" id="5JO-G0-688"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Icon Store" id="pPE-Ur-oeh"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9Z-nh-2BN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093.5999999999999" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JGl-07-tu7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AzU-lp-Hlh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N7g-Bu-rIT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r5y-4k-eq6" kind="relationship" relationship="rootViewController" id="su6-9t-eAT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8e-x3-CFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154.40000000000001" y="116.49175412293854"/>
         </scene>
