@@ -23,7 +23,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [ ] Chapter 15 - Displaying Banner Ads using Google AdMob
 - [ ] Chapter 16 - Working with Custom Fonts
 - [ ] Chapter 17 - Working with AirDrop, UIActivityViewController and Uniform Type Identifiers
-- [ ] Chapter 18 - Building Grid Layouts with Collection Views
+- [X] Chapter 18 - Building Grid Layouts with Collection Views
 - [ ] Chapter 19 - Interacting with Collection Views
 - [ ] Chapter 20 - Adaptive Collection Views Using Size Classes and UITraitCollection
 - [ ] Chapter 21 - Building a Today Widget Using App Extensions
