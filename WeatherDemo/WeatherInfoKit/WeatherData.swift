@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WeatherData {
-  var temperature: Int = 0
-  var weather: String = ""
+public struct WeatherData {
+  public var temperature: Int = 0
+  public var weather: String = ""
 }
