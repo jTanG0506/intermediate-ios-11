@@ -1,4 +1,4 @@
-# Intermediate iOS 11 Programming with Swift
+![](header.png)
 
 ## :question: About
 Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Programming with Swift](https://www.appcoda.com/intermediate-swift-programming-book/)
