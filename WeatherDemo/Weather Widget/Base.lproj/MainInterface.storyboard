@@ -50,6 +50,11 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="EfW-Vv-gfX" id="6li-Vb-h7d"/>
+                        <outlet property="temperatureLabel" destination="sEB-4F-ms5" id="cBP-H7-TwO"/>
+                        <outlet property="weatherLabel" destination="7Xv-pV-dq3" id="cye-Sf-QFK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
