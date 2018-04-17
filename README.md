@@ -26,7 +26,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [X] Chapter 18 - Building Grid Layouts with Collection Views
 - [ ] Chapter 19 - Interacting with Collection Views
 - [ ] Chapter 20 - Adaptive Collection Views Using Size Classes and UITraitCollection
-- [ ] Chapter 21 - Building a Today Widget Using App Extensions
+- [X] Chapter 21 - Building a Today Widget Using App Extensions
 - [ ] Chapter 22 - Building Slide Out Sidebar Menus
 - [ ] Chapter 23 - View Controller Transitions and Animations
 - [ ] Chapter 24 - Building a Slide Down Menu
