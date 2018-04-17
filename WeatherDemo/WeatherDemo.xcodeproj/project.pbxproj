@@ -73,6 +73,8 @@
 		8D44D8B02084D8A1009E5892 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8D44D8B32084D8A1009E5892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8D44D8B52084D8A1009E5892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D44D8BE2086A523009E5892 /* WeatherDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherDemo.entitlements; sourceTree = "<group>"; };
+		8D44D8BF2086A546009E5892 /* Weather Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weather Widget.entitlements"; sourceTree = "<group>"; };
 		8D71109A20816599002D76A2 /* WeatherInfoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherInfoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D71109C20816599002D76A2 /* WeatherInfoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherInfoKit.h; sourceTree = "<group>"; };
 		8D71109D20816599002D76A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		8D44D8AF2084D8A1009E5892 /* Weather Widget */ = {
 			isa = PBXGroup;
 			children = (
+				8D44D8BF2086A546009E5892 /* Weather Widget.entitlements */,
 				8D44D8B02084D8A1009E5892 /* TodayViewController.swift */,
 				8D44D8B22084D8A1009E5892 /* MainInterface.storyboard */,
 				8D44D8B52084D8A1009E5892 /* Info.plist */,
@@ -192,6 +195,7 @@
 		F4CB3D171DC1D121008A85BF /* WeatherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8D44D8BE2086A523009E5892 /* WeatherDemo.entitlements */,
 				F4AE64FE1FDFCA890019FB75 /* Controller */,
 				F4AE64FD1FDFCA7D0019FB75 /* Model */,
 				F4AE64FC1FDFCA730019FB75 /* Service */,
@@ -288,6 +292,11 @@
 						CreatedOnToolsVersion = 9.3;
 						DevelopmentTeam = HKNDM66956;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8D71109920816599002D76A2 = {
 						CreatedOnToolsVersion = 9.3;
@@ -299,6 +308,11 @@
 						DevelopmentTeam = HKNDM66956;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -430,6 +444,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Weather Widget/Weather Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKNDM66956;
@@ -454,6 +469,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "Weather Widget/Weather Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HKNDM66956;
@@ -647,6 +663,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeatherDemo/WeatherDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = HKNDM66956;
 				INFOPLIST_FILE = WeatherDemo/Info.plist;
@@ -663,6 +680,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WeatherDemo/WeatherDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = HKNDM66956;
 				INFOPLIST_FILE = WeatherDemo/Info.plist;

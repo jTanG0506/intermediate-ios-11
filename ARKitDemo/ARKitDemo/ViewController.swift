@@ -56,10 +56,12 @@ class ViewController: UIViewController, ARSKViewDelegate {
   
   func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
     // Create and configure a node for the anchor added to the view's session.
-    let labelNode = SKLabelNode(text: "👾")
-    labelNode.horizontalAlignmentMode = .center
-    labelNode.verticalAlignmentMode = .center
-    return labelNode
+    let birdTexture = SKTexture(image: #imageLiteral(resourceName: "bird"))
+    let birdNode = SKSpriteNode(texture: birdTexture)
+    birdNode.size = CGSize(width: birdNode.size.width * 0.05, height: birdNode.size.height * 0.05)
+//    labelNode.horizontalAlignmentMode = .center
+//    labelNode.verticalAlignmentMode = .center
+    return birdNode
   }
   
   func session(_ session: ARSession, didFailWithError error: Error) {

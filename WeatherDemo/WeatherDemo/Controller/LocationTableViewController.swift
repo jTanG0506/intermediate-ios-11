@@ -25,6 +25,8 @@ class LocationTableViewController: UITableViewController {
   private(set) var selectedCity = ""
   private(set) var selectedCountry = ""
   
+  var defaults = UserDefaults(suiteName: "group.io.github.jtang0506.WeatherDemo")
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
