@@ -20,8 +20,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   private var city = "Paris"
   private var country = "France"
   
+  var defaults = UserDefaults(suiteName: "group.io.github.jtang0506.WeatherDemo")!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    if let currentCity = defaults.value(forKey: "city") as? String,
+      let currentCountry = defaults.value(forKey: "country") as? String {
+      
+      city = currentCity
+      country = currentCountry
+    }
     
     cityLabel.text = "\(city), \(country)"
     
