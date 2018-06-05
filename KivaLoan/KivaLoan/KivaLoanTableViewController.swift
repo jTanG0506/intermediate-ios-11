@@ -18,6 +18,8 @@ class KivaLoanTableViewController: UITableViewController {
     
     tableView.estimatedRowHeight = 92.0
     tableView.rowHeight = UITableViewAutomaticDimension
+    
+    getLatestLoans()
   }
   
   override func didReceiveMemoryWarning() {
@@ -81,20 +83,21 @@ class KivaLoanTableViewController: UITableViewController {
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // Return the number of sections
-    return 0
+    return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // Return the number of rows
-    return 0
+    return loans.count
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! KivaLoanTableViewCell
     
-    // Configure the cell...
+    cell.nameLabel.text = loans[indexPath.row].name
+    cell.countryLabel.text = loans[indexPath.row].country
+    cell.useLabel.text = loans[indexPath.row].use
+    cell.amountLabel.text = "£\(loans[indexPath.row].amount)"
     
     return cell
   }
