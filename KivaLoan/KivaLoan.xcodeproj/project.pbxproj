@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D237EB220C7130400F3B504 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D237EB120C7130400F3B504 /* Loan.swift */; };
 		F498908D1DA39D610064F982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F498908C1DA39D610064F982 /* AppDelegate.swift */; };
 		F49890921DA39D610064F982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49890901DA39D610064F982 /* Main.storyboard */; };
 		F49890941DA39D610064F982 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49890931DA39D610064F982 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D237EB120C7130400F3B504 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		F49890891DA39D610064F982 /* KivaLoan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KivaLoan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F498908C1DA39D610064F982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49890911DA39D610064F982 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				F49890981DA39D610064F982 /* Info.plist */,
 				F498909E1DA39EC10064F982 /* KivaLoanTableViewController.swift */,
 				F49890A01DA39ED80064F982 /* KivaLoanTableViewCell.swift */,
+				8D237EB120C7130400F3B504 /* Loan.swift */,
 			);
 			path = KivaLoan;
 			sourceTree = "<group>";
@@ -94,7 +97,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = AppCoda;
 				TargetAttributes = {
 					F49890881DA39D610064F982 = {
@@ -144,6 +147,7 @@
 				F49890A11DA39ED80064F982 /* KivaLoanTableViewCell.swift in Sources */,
 				F498909F1DA39EC10064F982 /* KivaLoanTableViewController.swift in Sources */,
 				F498908D1DA39D610064F982 /* AppDelegate.swift in Sources */,
+				8D237EB220C7130400F3B504 /* Loan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -189,6 +194,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -239,6 +245,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -246,6 +253,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
