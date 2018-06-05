@@ -9,7 +9,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [X] Chapter 1 - Building Adaptive User Interfaces
 - [X] Chapter 2 - Adding Sections and Index list in UITableView
 - [X] Chapter 3 - Animating Table View Cells
-- [ ] Chapter 4 - Working with JSON and Codable in Swift 4
+- [X] Chapter 4 - Working with JSON and Codable in Swift 4
 - [ ] Chapter 5 - How to Integrate the Twitter and Facebook SDK for Social Sharing
 - [ ] Chapter 6 - Working with Email and Attachments
 - [ ] Chapter 7 - Sending SMS and MMS Using MessageUI Framework
