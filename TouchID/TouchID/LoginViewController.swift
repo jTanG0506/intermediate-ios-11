@@ -48,11 +48,20 @@ class LoginViewController: UIViewController {
     loginView.transform = CGAffineTransform(translationX: 0, y: -700)
     
     UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-      
       self.loginView.transform = CGAffineTransform.identity
-      
     }, completion: nil)
-    
+  }
+  
+  @IBAction func authenticateWithPassword() {
+    if emailTextField.text == "jTanG" && passwordTextField.text == "nincapoop" {
+      performSegue(withIdentifier: "showHomeScreen", sender: nil)
+    } else {
+      // Shake login form to indicate incorrect credentials.
+      loginView.transform = CGAffineTransform(translationX: 25, y: 0)
+      UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.15, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+        self.loginView.transform = CGAffineTransform.identity
+      }, completion: nil)
+    }
   }
   
   func authenticateWithBiometric() {
