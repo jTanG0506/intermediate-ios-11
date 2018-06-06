@@ -33,7 +33,7 @@ Repository of projects created whilst reading AppCoda's [Intermediate iOS 11 Pro
 - [ ] Chapter 25 - Self Sizing Cells and Dynamic Type
 - [ ] Chapter 26 - XML Parsing, RSS and Expandable Table View Cells
 - [ ] Chapter 27 - Applying a Blurred Background Using UIVisualEffect
-- [ ] Chapter 28 - Using Touch ID and Face ID For Authentication
+- [X] Chapter 28 - Using Touch ID and Face ID For Authentication
 - [ ] Chapter 29 - Building a Carousel-Like User Interface
 - [ ] Chapter 30 - Working with Parse
 - [ ] Chapter 31 - Parsing CSV and Preloading a SQLite Database Using Core Data
