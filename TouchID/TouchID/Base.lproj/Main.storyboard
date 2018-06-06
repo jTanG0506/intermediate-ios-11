@@ -139,7 +139,7 @@
                         <outlet property="emailTextField" destination="KhS-Tq-0Vv" id="3sh-rm-QGf"/>
                         <outlet property="loginView" destination="6Ej-6w-e8c" id="Lxx-FO-33A"/>
                         <outlet property="passwordTextField" destination="ECK-8m-xzd" id="WSs-Aj-KWL"/>
-                        <segue destination="e9l-Dj-eSY" kind="presentation" identifier="setHomeScreen" modalTransitionStyle="crossDissolve" id="zVn-5D-cBx"/>
+                        <segue destination="e9l-Dj-eSY" kind="presentation" identifier="showHomeScreen" modalTransitionStyle="crossDissolve" id="zVn-5D-cBx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UY9-ql-B55" userLabel="First Responder" sceneMemberID="firstResponder"/>
